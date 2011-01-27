@@ -7,8 +7,12 @@ from geopy.geocoders.base import Geocoder
 
 class Yahoo(Geocoder):
 
+    # this is deprecated.
     BASE_URL = "http://api.local.yahoo.com/MapsService/V1/geocode?%s"
 
+    # new yahoo api url.
+    NEW_BASE_URL = "http://where.yahooapis.com/geocode?%s" 
+    
     def __init__(self, app_id, format_string='%s', output_format='xml'):
         self.app_id = app_id
         self.format_string = format_string
